@@ -8,7 +8,7 @@ using namespace std;
  * \pre a.length() == b.length
  * \pre a.length() == b.length() - 1
  */
-bool oneEdit(string a, string b)
+bool checkOneEdit(string a, string b)
 {
     int lag = 0;
     for (int i = 0; i < a.length(); ++i)
@@ -23,33 +23,33 @@ bool oneEdit(string a, string b)
     return true;
 }
 
-bool checkOneEdit(string s1, string s2)
+bool isOneEditAway(string s1, string s2)
 {
     int s1Len = s1.length(), s2Len = s2.length();
     if (s1Len == s2Len)
     {
-        return oneEdit(s1, s2);
+        return checkOneEdit(s1, s2);
     }
     if (s1Len == s2Len - 1)
     {
-        return oneEdit(s1, s2);
+        return checkOneEdit(s1, s2);
     }
     if (s2Len == s1Len - 1)
     {
-        return oneEdit(s2, s1);
+        return checkOneEdit(s2, s1);
     }
     return false;
 }
 
 int main()
 {
-    cout << checkOneEdit("appee", "apple") << endl;
-    cout << checkOneEdit("", "") << endl;
-    cout << checkOneEdit("a", "") << endl;
-    cout << checkOneEdit("", "x") << endl;
-    cout << checkOneEdit("latte", "late") << endl;
-    cout << checkOneEdit("lass", "lasso") << endl;
-    cout << !checkOneEdit("hello", "helen") << endl;
-    cout << !checkOneEdit("apppl", "apl") << endl;
+    cout << isOneEditAway("appee", "apple") << endl;
+    cout << isOneEditAway("", "") << endl;
+    cout << isOneEditAway("a", "") << endl;
+    cout << isOneEditAway("", "x") << endl;
+    cout << isOneEditAway("latte", "late") << endl;
+    cout << isOneEditAway("lass", "lasso") << endl;
+    cout << !isOneEditAway("hello", "helen") << endl;
+    cout << !isOneEditAway("apppl", "apl") << endl;
     return 0;
 }
