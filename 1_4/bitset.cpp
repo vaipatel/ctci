@@ -1,7 +1,7 @@
-#include <iostream>
-#include <cctype>
-#include <cstring>
-#include <bitset> 
+#include <iostream> // cout
+#include <cctype> // tolower
+#include <cstring> // strlen
+#include <bitset> // bitset
 
 bool isPermOfPalindrome(const char *s)
 {
