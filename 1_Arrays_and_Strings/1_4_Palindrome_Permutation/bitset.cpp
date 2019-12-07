@@ -13,7 +13,7 @@ bool isPermOfPalindrome(const char *s)
         int c = tolower(s[i]) - 'a';
         // ignore non-letter chars
         if (c < 0) continue;
-        // just retoggle the bits for c using XOR
+        // retoggle the bits for c using XOR
         b = b ^ (1 << c);
     }
     // b should have just one or no bits set to be a palindrome perm.
@@ -23,5 +23,8 @@ bool isPermOfPalindrome(const char *s)
 
 int main()
 {
-  std::cout << isPermOfPalindrome("caac") << std::endl;
+    std::cout << isPermOfPalindrome("tACo Cat") << std::endl;
+    std::cout << isPermOfPalindrome("xaabb") << std::endl;
+    std::cout << isPermOfPalindrome("") << std::endl;
+    std::cout << isPermOfPalindrome("a") << std::endl;
 }
