@@ -13,7 +13,7 @@ bool oneEdit(string a, string b)
         if (a[i - lag] != b[i])
         {
             if (lag == 1) return false;
-            
+            // lag shorter str's idx by 1
             lag = 1;
         }
     }
