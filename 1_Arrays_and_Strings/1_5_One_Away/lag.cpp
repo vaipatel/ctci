@@ -2,15 +2,15 @@
 #include <string>
 using namespace std;
 
-// \pre 0 <= s.length()
-// \pre s.length() == b.length
-// \pre s.length() == b.length() - 1
-bool oneEdit(string s, string b)
+// \pre 0 <= a.length()
+// \pre a.length() == b.length
+// \pre a.length() == b.length() - 1
+bool oneEdit(string a, string b)
 {
     int lag = 0;
-    for (int i = 0; i < s.length(); ++i)
+    for (int i = 0; i < a.length(); ++i)
     {
-        if (s[i - lag] != b[i])
+        if (a[i - lag] != b[i])
         {
             if (lag == 1) return false;
             
