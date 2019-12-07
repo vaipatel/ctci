@@ -2,9 +2,12 @@
 #include <string>
 using namespace std;
 
-// \pre 0 <= a.length()
-// \pre a.length() == b.length
-// \pre a.length() == b.length() - 1
+
+/*!
+ * \pre 0 <= a.length()
+ * \pre a.length() == b.length
+ * \pre a.length() == b.length() - 1
+ */
 bool oneEdit(string a, string b)
 {
     int lag = 0;
